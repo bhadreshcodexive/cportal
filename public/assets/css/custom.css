@@ -1,0 +1,60 @@
+@import url('./font/gotham.css');
+:root {
+    --login-bg-color:#191919;
+    --color1: #3c3c3c;
+    --color2: #727272;
+}
+
+body {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    color: var(--login-bg-color);
+}
+a {
+    outline: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+.header {
+    margin: 0 50px;
+    height: 100px;
+}
+.header .row.inner {
+    align-items: center;
+    height: 100%;
+}
+/* Login css */
+.login-cms {
+    background-color: var(--login-bg-color);
+}
+.site-link {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+}
+.site-link img {
+    width: 17px;
+}
+.site-link a {
+    color: var(--color2);
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.login-title {
+    color: #fff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.36px;
+    text-align: center;
+}
+/* Login css */
+@media (min-width: 1200px) {
+    .login-cms .container {
+        max-width: 440px;
+    }
+}
