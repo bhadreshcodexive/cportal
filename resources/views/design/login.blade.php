@@ -14,12 +14,12 @@
   <body class="login-cms">
     <div class="header">
         <div class="row inner">
-            <div class="col-lg-6 col-sm-6 col-md-12">
+            <div class="col-lg-6 col-sm-6 col-md-6">
                 <div class="logo">
                     <img src="{{asset('assets/images/logo.png')}}" alt="web">
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-6 col-md-12">
+            <div class="col-lg-6 col-sm-6 col-md-6">
                 <div class="site-link">
                     <img src="{{asset('assets/images/web.png')}}" alt="web">
                     <a href="javascript:void(0);">Visit our website</a>
@@ -27,21 +27,26 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        {{-- sdsd --}}
-        <div class="row">
-            <div class="login-main">
-                <div class="login-title">No more endless <br/> email threads.</div>
-                <div class="login-form">
-                    <div class="form-outer">
-                        <label>Email</label>
-                        <input type="text" name="email" placeholder="Email" class="form--input">
-                    </div>
-                    <div class="form-outer">
-                        <label>Email</label>
-                        <input type="text" name="email" placeholder="Email" class="form--input">
-                    </div>
-                    <input type="submit" value="Enter" class="login-submit-btn">
+    <div class="login-outer">
+        <div class="container">
+            {{-- sdsd --}}
+            <div class="row">
+                <div class="login-main">
+                    <div class="login-title">No more endless <br/> email threads.</div>
+                    <form class="login-form" autocomplete="off">
+                        <div class="form-outer">
+                            <label class="flabel">Email</label>
+                            <input type="email" name="email" placeholder="Email" class="form--input">
+                        </div>
+                        <div class="form-outer">
+                            <label class="flabel">Password</label>
+                            <div class="input-pass">
+                                <input type="password" name="password" placeholder="Password" class="form--input">
+                                <a href="javascript:void(0);" class="lost-pass">Lost your password?</a>
+                            </div>
+                        </div>
+                        <input type="submit" value="Enter" class="btn1 login-submit-btn">
+                    </form>
                 </div>
             </div>
         </div>

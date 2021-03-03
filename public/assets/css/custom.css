@@ -1,17 +1,19 @@
 @import url('./font/gotham.css');
 :root {
-    --login-bg-color:#191919;
+    --color:#191919;
     --color1: #3c3c3c;
     --color2: #727272;
+    --color3: #000000;
+    --color4: #454545;
 }
 
 body {
     font-family: 'Gotham', sans-serif;
     font-size: 14px;
     line-height: normal;
-    color: var(--login-bg-color);
+    color: var(--color);
 }
-a {
+a, input {
     outline: 0;
 }
 a:hover {
@@ -25,9 +27,56 @@ a:hover {
     align-items: center;
     height: 100%;
 }
+.form-outer {
+    margin-bottom: 15px;
+}
+.form--input {
+    height: 46px;
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 15px;
+    outline: 0;
+    color: var(--color3);
+}
+.form--input::placeholder {
+    color: var(--color3);
+    font-size: 14px;
+    line-height: 16px
+}
+.flabel {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.12px;
+    color: var(--color2);
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+}
+.form-outer {
+    position: relative;
+}
+.btn1 {
+    background-color: var(--color);
+    border:1px solid #ffffff;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    height: 44px;
+    padding: 12px 15px;
+    min-width: 150px;
+    cursor: pointer;
+}
+.btn1:hover {
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
 /* Login css */
 .login-cms {
-    background-color: var(--login-bg-color);
+    background-color: var(--color);
 }
 .site-link {
     display: inline-block;
@@ -55,18 +104,42 @@ a:hover {
 .login-main {
     width: 100%;
 }
-.form--input {
-    height: 46px;
-    border-radius: 3px;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    padding: 15px;
-    outline: 0;
+.login-form {
+    text-align: center;
+    margin-top: 50px;
+}
+.login-form .form-outer {
+    margin-bottom: 18px;
+}
+.input-pass {
+    position: relative;
+}
+.lost-pass {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: underline;
+    color: var(--color4);
+    letter-spacing: -0.12px;
+}
+.lost-pass:hover {
+    color: var(--color4);
+    text-decoration: underline;
+}
+.login-submit-btn {
+    margin-top: 35px;
+}
+.login-outer {
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
 }
 /* Login css */
-@media (min-width: 1200px) {
+@media (min-width: 480px) {
     .login-cms .container {
         max-width: 440px;
     }
 }
+
